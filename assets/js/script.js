@@ -4,7 +4,15 @@ var firstCardClasses;
 var secondCardClasses;
 var maxMatches = 9;
 var matches = 0;
+var attempts = 0;
+var gamesPlayed = 0;
 
+
+function displayStats () {
+  document.getElementById('games-played').textContent = gamesPlayed;
+  document.getElementById('attempts').textContent = attempts;
+  document.getElementById('accuracy').textContent = Math.round(100*(matches/attempts)) + '%';
+}
 
 function setToNull () {
 
@@ -33,16 +41,18 @@ function handleClick(event) {
     document.getElementById('gameCards').removeEventListener('click', handleClick);
 
     if (firstCardClasses === secondCardClasses) {
-      console.log('match');
       document.getElementById('gameCards').addEventListener('click', handleClick);
       setToNull();
       matches++;
-      console.log(matches);
+      attempts++;
+      displayStats();
+      console.log('number of attampts:', attempts);
       if(matches === maxMatches){
         document.getElementById('modal').classList.remove('hidden');
       }
     } else {
-      console.log('no match');
+      attempts++;
+      displayStats();
       setTimeout(noMatch, 1500);
       document.getElementById('gameCards').addEventListener('click', handleClick);
     }
