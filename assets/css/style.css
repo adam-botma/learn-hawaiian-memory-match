@@ -9,10 +9,19 @@ body{
   align-items: center;
   background-image: url("../images/lfz-background.jpg");
   background-size: cover;
-
-
-
 }
+
+.modal{
+  position: fixed;
+  background-color: rgb(78, 163, 243);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 /* HEADING AREA */
 h1 {
   text-align: center;

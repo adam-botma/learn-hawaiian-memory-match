@@ -2,6 +2,8 @@ var firstCardClicked;
 var secondCardClicked;
 var firstCardClasses;
 var secondCardClasses;
+var maxMatches = 9;
+var matches = 0;
 
 
 function setToNull () {
@@ -34,6 +36,11 @@ function handleClick(event) {
       console.log('match');
       document.getElementById('gameCards').addEventListener('click', handleClick);
       setToNull();
+      matches++;
+      console.log(matches);
+      if(matches === maxMatches){
+        document.getElementById('modal').classList.remove('hidden');
+      }
     } else {
       console.log('no match');
       setTimeout(noMatch, 1500);
