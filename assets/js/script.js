@@ -7,11 +7,40 @@ var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
 
+function resetGame () {
+  matches = 0;
+  attempts = 0;
+  gamesPlayed++;
+  displayStats();
+  resetCards();
+  document.getElementById('modal').classList.add('hidden');
+}
+
+
+function resetCards () {
+  var hiddenCards = document.querySelectorAll('.card-back');
+  for (var i = 0 ; i < hiddenCards.length ; i++){
+    hiddenCards[i].classList.remove('hidden');
+  }
+
+
+}
+
+function calculateAccuracy (matches, attempts) {
+  if (!attempts){
+    return '0%';
+  } else {
+     var result = Math.round(100 * (matches / attempts)) + '%'
+      return result;
+    }
+
+}
+
 
 function displayStats () {
   document.getElementById('games-played').textContent = gamesPlayed;
   document.getElementById('attempts').textContent = attempts;
-  document.getElementById('accuracy').textContent = Math.round(100*(matches/attempts)) + '%';
+  document.getElementById('accuracy').textContent = calculateAccuracy(matches, attempts);
 }
 
 function setToNull () {
@@ -63,3 +92,4 @@ function handleClick(event) {
 }
 
 document.getElementById('gameCards').addEventListener('click', handleClick);
+document.getElementById('modal').addEventListener('click', resetGame);
