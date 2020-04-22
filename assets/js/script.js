@@ -1,3 +1,5 @@
+var cardDeck = ['react-logo', 'react-logo', 'php-logo', 'php-logo', 'node-logo', 'node-logo', 'mysql-logo', 'mysql-logo', 'html-logo', 'html-logo', 'gitHub-logo', 'gitHub-logo', 'js-logo', 'js-logo', 'css-logo', 'css-logo', 'docker-logo','docker-logo']
+var theCards = document.querySelectorAll('.card-front');
 var firstCardClicked;
 var secondCardClicked;
 var firstCardClasses;
@@ -6,6 +8,9 @@ var maxMatches = 9;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
+
+shuffleDeck();
+displayCards();
 
 function resetGame () {
   matches = 0;
@@ -17,7 +22,24 @@ function resetGame () {
 }
 
 
+function shuffleDeck ()  {
+    for (var i = cardDeck.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      [cardDeck[i], cardDeck[j]] = [cardDeck[j], cardDeck[i]];
+    }
+  }
+
+function displayCards () {
+   var theCards = document.querySelectorAll('.card-front');
+   for (var c=0; c < theCards.length; c++){
+    theCards[c].className = 'card-front '+cardDeck[c];
+}
+}
+
+
 function resetCards () {
+  shuffleDeck();
+  displayCards();
   var hiddenCards = document.querySelectorAll('.card-back');
   for (var i = 0 ; i < hiddenCards.length ; i++){
     hiddenCards[i].classList.remove('hidden');
