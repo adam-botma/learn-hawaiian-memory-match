@@ -6,36 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/grid.css">
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" >
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
   <div class="container">
     <div class="row heading-row">
-      <h1>LFZ Memory Match</h1>
+      <h1>GO FISH! Memory Match</h1>
     </div>
     <div class="row main-row">
       <div class="col-2 stats-container">
-        <div class="stats">
+        <!-- <div class="stats">
           <h3>Stats</h3>
-        </div>
-        <div class="stats">
+        </div> -->
+        <!-- <div class="stats">
           <h3>Games Played</h3>
+        </div> -->
+        <div class= "nes-container is-rounded is-dark">
+          <p class="stats-title">Games Played</p>
+          <div class='numbers'>
+          <p id="games-played">0</p>
+          </div>
         </div>
-        <div class="stats">
-          <h3 id="games-played">0</h3>
-        </div>
-        <div class="stats">
+        <!-- <div class="stats">
           <h3>Attempts</h3>
-        </div>
-        <div class="stats">
+        </div> -->
+        <!-- <div class="stats">
           <h3 id="attempts">0</h3>
+        </div> -->
+        <div class="nes-container is-rounded is-dark">
+          <p class="stats-title">Attempts</p>
+          <div class='numbers'>
+            <p id="attempts">0</p>
+          </div>
         </div>
-        <div class="stats">
+        <div class="nes-container is-rounded is-dark">
+          <p class="stats-title">Matches</p>
+          <div class='numbers'>
+            <p id="matches">0</p>
+          </div>
+        </div>
+        <!-- <div class="stats">
           <h3>Accuracy</h3>
-        </div>
-        <div class="stats">
+        </div> -->
+        <!-- <div class="stats">
           <h3 id="accuracy">0</h3>
+        </div> -->
+        <div class="nes-container is-rounded is-dark">
+          <p class="stats-title">Accuracy</p>
+          <div class='numbers'>
+            <p id="accuracy">0</p>
+          </div>
         </div>
       </div>
       <div id= "gameCards" class="col-10 card-container">
@@ -126,6 +148,11 @@
     <h2>You matched all the cards!</h2>
     <button>PLAY AGAIN?</button>
   </div>
+
+  <!-- <div class="match">
+    <h1>Match!</h1>
+  </div> -->
+
   <script src="assets/js/script.js"></script>
 </body>
 
