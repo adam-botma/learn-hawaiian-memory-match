@@ -117,6 +117,7 @@ h1 {
   /* background-image: url(../images/lfz-card.jpg);
   background-size: cover;
   background-position: center; */
+
 }
 
 .card-front, .card-back {
@@ -133,7 +134,10 @@ h1 {
   background-image: url(../images/hang-loose-card.png);
   background-color: black;
   background-size: contain;
+
 }
+
+
 .js-logo {
   background-image: url(../images/crab.png);
 }
@@ -177,12 +181,35 @@ h1 {
   background-image: url(../images/thankyou-hawaiian.png);
 }
 .php-logo{
-  background-image: url(../images/php-logo.jpeg);
+  background-image: url(../images/man.png);
+}
+.php-logo1{
+  background-image: url(../images/man-hawaiian.png);
 }
 .react-logo{
-  background-image: url(../images/react-logo.png);
+  background-image: url(../images/woman.png);
+}
+.react-logo1{
+  background-image: url(../images/women-hawaiian.png);
 }
 
 .hidden {
   display: none;
+}
+
+
+/* MODAl */
+
+
+.allStats{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalDiv {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

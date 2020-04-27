@@ -1,4 +1,4 @@
-var cardDeck = ['react-logo', 'react-logo', 'php-logo', 'php-logo', 'node-logo', 'node-logo1', 'mysql-logo', 'mysql-logo1', 'html-logo', 'html-logo1', 'gitHub-logo', 'gitHub-logo1', 'js-logo', 'js-logo1', 'css-logo', 'css-logo1', 'docker-logo','docker-logo1']
+var cardDeck = ['react-logo', 'react-logo1', 'php-logo', 'php-logo1', 'node-logo', 'node-logo1', 'mysql-logo', 'mysql-logo1', 'html-logo', 'html-logo1', 'gitHub-logo', 'gitHub-logo1', 'js-logo', 'js-logo1', 'css-logo', 'css-logo1', 'docker-logo','docker-logo1']
 var theCards = document.querySelectorAll('.card-front');
 var firstCardClicked;
 var secondCardClicked;
@@ -8,6 +8,10 @@ var maxMatches = 9;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
+var accuracy;
+var firstClick = new Audio('../memory_match/assets/sounds/bling.ogg');
+var matchMade = new Audio('../memory_match/assets/sounds/achieved.ogg');
+var nonMatch = new Audio('../memory_match/assets/sounds/magic.ogg');
 
 
 shuffleDeck();
@@ -80,6 +84,7 @@ function setToNull () {
 }
 
 function noMatch () {
+
     firstCardClicked.classList.remove('hidden');
     secondCardClicked.classList.remove('hidden');
     setToNull();
@@ -93,6 +98,7 @@ function handleClick(event) {
   }
   event.target.classList.add('hidden');
   if(!firstCardClicked){
+    firstClick.play();
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className;
     if (firstCardClasses.includes('1')) {
@@ -108,6 +114,7 @@ function handleClick(event) {
     document.getElementById('gameCards').removeEventListener('click', handleClick);
 
     if (firstCardClasses === secondCardClasses) {
+      matchMade.play();
       document.getElementById('gameCards').style.border = 'solid green 6px';
       setTimeout(bigGreen, 1250);
       document.getElementById('gameCards').addEventListener('click', handleClick);
@@ -116,9 +123,13 @@ function handleClick(event) {
       attempts++;
       displayStats();
       if(matches === maxMatches){
+
         document.getElementById('modal').classList.remove('hidden');
+        document.getElementById('modalAttempts').textContent = attempts;
+        document.getElementById('modalAccuracy').textContent = calculateAccuracy(matches, attempts);
       }
     } else {
+      nonMatch.play();
       attempts++;
       displayStats();
       document.getElementById('gameCards').style.border = 'solid red 6px';
@@ -134,23 +145,3 @@ function handleClick(event) {
 
 document.getElementById('gameCards').addEventListener('click', handleClick);
 document.getElementById('modal').addEventListener('click', resetGame);
-
-
-
-
-
-
-// TAKE OFF THE LAST STRING ITEM IF IT CONTAINS A 1
-// var adz = 'adz';
-// var adz1 = 'adz1'
-
-// function stripeOnes (str) {
-//   console.log(str);
-//   if (str.includes('1')) {
-//    str = str.substring(0, str.length - 1);
-//    console.log(str);
-//     return str;
-//   } else {
-//    return str;
-//   }
-//  }
