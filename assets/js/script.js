@@ -1,4 +1,4 @@
-var cardDeck = ['react-logo', 'react-logo', 'php-logo', 'php-logo', 'node-logo', 'node-logo', 'mysql-logo', 'mysql-logo', 'html-logo', 'html-logo', 'gitHub-logo', 'gitHub-logo', 'js-logo', 'js-logo', 'css-logo', 'css-logo', 'docker-logo','docker-logo']
+var cardDeck = ['react-logo', 'react-logo1', 'php-logo', 'php-logo1', 'node-logo', 'node-logo1', 'mysql-logo', 'mysql-logo1', 'html-logo', 'html-logo1', 'gitHub-logo', 'gitHub-logo1', 'js-logo', 'js-logo1', 'css-logo', 'css-logo1', 'docker-logo','docker-logo1']
 var theCards = document.querySelectorAll('.card-front');
 var firstCardClicked;
 var secondCardClicked;
@@ -8,9 +8,17 @@ var maxMatches = 9;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
+var accuracy;
+var firstClick = new Audio('../memory_match/assets/sounds/bling.ogg');
+var matchMade = new Audio('../memory_match/assets/sounds/achieved.ogg');
+var nonMatch = new Audio('../memory_match/assets/sounds/magic.ogg');
+
 
 shuffleDeck();
 displayCards();
+
+
+
 
 function resetGame () {
   matches = 0;
@@ -58,10 +66,14 @@ function calculateAccuracy (matches, attempts) {
 
 }
 
+function bigGreen () {
+  document.getElementById('gameCards').style.border = '';
+}
 
 function displayStats () {
   document.getElementById('games-played').textContent = gamesPlayed;
   document.getElementById('attempts').textContent = attempts;
+  document.getElementById('matches').textContent = matches;
   document.getElementById('accuracy').textContent = calculateAccuracy(matches, attempts);
 }
 
@@ -72,9 +84,12 @@ function setToNull () {
 }
 
 function noMatch () {
+
     firstCardClicked.classList.remove('hidden');
     secondCardClicked.classList.remove('hidden');
     setToNull();
+  document.getElementById('gameCards').style.border = '';
+
   }
 
 function handleClick(event) {
@@ -83,28 +98,43 @@ function handleClick(event) {
   }
   event.target.classList.add('hidden');
   if(!firstCardClicked){
+    firstClick.play();
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className;
+    if (firstCardClasses.includes('1')) {
+      firstCardClasses = firstCardClasses.substring(0, firstCardClasses.length - 1);
+    }
 
   } else {
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
+    if (secondCardClasses.includes('1')) {
+      secondCardClasses = secondCardClasses.substring(0, secondCardClasses.length - 1);
+    }
     document.getElementById('gameCards').removeEventListener('click', handleClick);
 
     if (firstCardClasses === secondCardClasses) {
+      matchMade.play();
+      document.getElementById('gameCards').style.border = 'solid green 6px';
+      setTimeout(bigGreen, 1250);
       document.getElementById('gameCards').addEventListener('click', handleClick);
       setToNull();
       matches++;
       attempts++;
       displayStats();
-      console.log('number of attampts:', attempts);
       if(matches === maxMatches){
+
         document.getElementById('modal').classList.remove('hidden');
+        document.getElementById('modalAttempts').textContent = attempts;
+        document.getElementById('modalAccuracy').textContent = calculateAccuracy(matches, attempts);
       }
     } else {
+      nonMatch.play();
       attempts++;
       displayStats();
-      setTimeout(noMatch, 1500);
+      document.getElementById('gameCards').style.border = 'solid red 6px';
+      setTimeout(noMatch, 1250);
+
       document.getElementById('gameCards').addEventListener('click', handleClick);
     }
 

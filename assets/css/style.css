@@ -7,7 +7,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/lfz-background.jpg");
+  /* background-image: url(../images/island.png); */
+  background-color: black;
   background-size: cover;
 }
 
@@ -22,11 +23,35 @@ body{
   flex-direction: column;
 }
 
+
+.match{
+  position: fixed;
+  background-color: none;
+
+  height: 100%;
+  width: 100%;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.match > h1{
+  background-color: black;
+  color: #fdb7e7!important;
+  border: 5px solid #fdb7e7;
+
+}
+
+
+
+
 /* HEADING AREA */
 h1 {
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
+  color: white;
+  padding: 2rem;
 }
 
 .heading-row{
@@ -48,7 +73,7 @@ h1 {
 .stats-container{
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  justify-content: space-around;
 
 }
 
@@ -58,9 +83,25 @@ h1 {
  text-align: center;
 }
 
+.nes-container{
+  background-color: black!important;
+  padding: 0!important;
+}
 
+.stats-title {
+    color: black;
+    background-color: white;
+    text-align: center;
+    padding: 3px;
+}
 
+.numbers {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.2rem;
 
+}
 
 /* CARDS AREA */
 .card-container {
@@ -70,18 +111,19 @@ h1 {
 }
 
 .cards{
-  height: 90%;
+  height: 100%;
   margin: .5rem ;
   position: relative;
   /* background-image: url(../images/lfz-card.jpg);
   background-size: cover;
   background-position: center; */
+
 }
 
 .card-front, .card-back {
   height: 100%;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -89,36 +131,85 @@ h1 {
 }
 
 .card-back {
-  background-image: url(../images/lfz-card.jpg);
+  background-image: url(../images/hang-loose-card.png);
+  background-color: black;
+  background-size: contain;
+
 }
+
+
 .js-logo {
-  background-image: url(../images/js-logo.png);
+  background-image: url(../images/crab.png);
+}
+.js-logo1{
+  background-image: url(../images/crab-hawaiian.png);
 }
 .css-logo{
-  background-image: url(../images/css-logo.png);
+  background-image: url(../images/fish.png);
+}
+.css-logo1{
+  background-image: url(../images/fish-hawaiian.png);
 }
 .docker-logo{
-  background-image: url(../images/docker-logo.jpg);
+  background-image: url(../images/turtle.png);
+}
+.docker-logo1{
+  background-image: url(../images/turtle-hawaiian.png);
 }
 .gitHub-logo{
-  background-image: url(../images/gitHub-logo.png);
+  background-image: url(../images/hello.png);
+}
+.gitHub-logo1{
+  background-image: url(../images/hello-hawaiian.png);
 }
 .html-logo{
-  background-image: url(../images/html-logo.png);
+  background-image: url(../images/shark.png);
+}
+.html-logo1{
+  background-image: url(../images/shark-hawaiian.png);
 }
 .mysql-logo{
-  background-image: url(../images/mysql-logo.jpg);
+  background-image: url(../images/lizard.png);
+}
+.mysql-logo1{
+  background-image: url(../images/lizard-hawaiian.png);
 }
 .node-logo{
-  background-image: url(../images/node-logo.png);
+  background-image: url(../images/thankyou.png);
+}
+.node-logo1{
+  background-image: url(../images/thankyou-hawaiian.png);
 }
 .php-logo{
-  background-image: url(../images/php-logo.jpeg);
+  background-image: url(../images/man.png);
+}
+.php-logo1{
+  background-image: url(../images/man-hawaiian.png);
 }
 .react-logo{
-  background-image: url(../images/react-logo.png);
+  background-image: url(../images/woman.png);
+}
+.react-logo1{
+  background-image: url(../images/women-hawaiian.png);
 }
 
 .hidden {
   display: none;
+}
+
+
+/* MODAl */
+
+
+.allStats{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalDiv {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
