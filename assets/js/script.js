@@ -12,6 +12,13 @@ var accuracy;
 var firstClick = new Audio('../assets/sounds/bling.ogg');
 var matchMade = new Audio('../assets/sounds/achieved.ogg');
 var nonMatch = new Audio('../assets/sounds/magic.ogg');
+var startScreen = document.getElementById('start-modal');
+document.onkeypress = function (e){
+  if(e.keyCode == 32){
+    console.log(e);
+    startScreen.classList.add('hidden');
+  }
+}
 
 
 shuffleDeck();
