@@ -9,9 +9,9 @@ var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
 var accuracy;
-var firstClick = new Audio('../memory_match/assets/sounds/bling.ogg');
-var matchMade = new Audio('../memory_match/assets/sounds/achieved.ogg');
-var nonMatch = new Audio('../memory_match/assets/sounds/magic.ogg');
+var firstClick = new Audio('../assets/sounds/bling.ogg');
+var matchMade = new Audio('../assets/sounds/achieved.ogg');
+var nonMatch = new Audio('../assets/sounds/magic.ogg');
 
 
 shuffleDeck();
