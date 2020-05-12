@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/grid.css">
-  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" >
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -23,10 +23,10 @@
         <!-- <div class="stats">
           <h3>Games Played</h3>
         </div> -->
-        <div class= "nes-container is-rounded is-dark">
+        <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Games Played</p>
           <div class='numbers'>
-          <p id="games-played">0</p>
+            <p id="games-played">0</p>
           </div>
         </div>
         <!-- <div class="stats">
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div id= "gameCards" class="col-10 card-container">
+      <div id="gameCards" class="col-10 card-container">
         <div class="row">
           <div class="cards col-2">
             <div class="card-front react-logo"></div>
@@ -143,25 +143,22 @@
     </div>
 
   </div>
-  <div id ="modal" class="modal hidden">
-    <h1>NICE JOB LEGEND!</h1>
-    <h2>You matched all the cards!</h2>
-    <div class="allStats">
-      <div class=modalDiv>
-      <h3>Attempts</h3>
-      <p id="modalAttempts">0</p>
-      </div>
-      <div class="modalDiv">
-        <h3>Accuracy</h3>
-        <p id="modalAccuracy">0</p>
-      </div>
-    </div>
-    <button>PLAY AGAIN?</button>
+  <div id="modal" class="modal hidden ">
+    <h1 class="blink">NICE JOB LEGEND!</h1>
+    <h2 class="modal-middle-text">You matched all the cards!</h2>
+    <button class="nes-btn">PLAY AGAIN?</button>
   </div>
 
-  <!-- <div class="match">
-    <h1>Match!</h1>
-  </div> -->
+  <div id="start-modal" class="modal start-modal">
+    <img src="/assets/images/title-text.png" alt="">
+    <h2 class="modal-middle-text blink red">Press Space to Begin</h2>
+    <button id='instructions-button' class="nes-btn">Instructions</button>
+  </div>
+
+  <div id="instructions-modal" class="modal instructions-modal hidden">
+    <h2 class="modal-middle-text">Instructions go here</h2>
+    <button id='back-button' class="nes-btn">Back</button>
+  </div>
 
   <script src="assets/js/script.js"></script>
 </body>
