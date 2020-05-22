@@ -17,24 +17,14 @@
     </div>
     <div class="row main-row">
       <div class="col-2 stats-container">
-        <!-- <div class="stats">
-          <h3>Stats</h3>
-        </div> -->
-        <!-- <div class="stats">
-          <h3>Games Played</h3>
-        </div> -->
+
         <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Games Played</p>
           <div class='numbers'>
             <p id="games-played">0</p>
           </div>
         </div>
-        <!-- <div class="stats">
-          <h3>Attempts</h3>
-        </div> -->
-        <!-- <div class="stats">
-          <h3 id="attempts">0</h3>
-        </div> -->
+
         <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Attempts</p>
           <div class='numbers'>
@@ -47,12 +37,7 @@
             <p id="matches">0</p>
           </div>
         </div>
-        <!-- <div class="stats">
-          <h3>Accuracy</h3>
-        </div> -->
-        <!-- <div class="stats">
-          <h3 id="accuracy">0</h3>
-        </div> -->
+
         <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Accuracy</p>
           <div class='numbers'>
@@ -156,8 +141,18 @@
   </div>
 
   <div id="instructions-modal" class="modal instructions-modal hidden">
-    <h2 class="modal-middle-text">Instructions go here</h2>
+    <div class="instructions-container">
+      <div class="middle-instructions-container">
+    <h2 class="instructions-middle-text">Aloha! Flip two cards over by clicking/tapping on
+      them. The goal is to match the English word and image with the corresponding
+      Hawaiian word.  To help, matching cards have the same background color and image
+      icon.  See how fast you can match the cards... your time may get you on the
+      leader board!
+    </h2>
+    <img src="assets/images/instructions_image.png" alt="">
+    </div>
     <button id='back-button' class="nes-btn">Back</button>
+    </div>
   </div>
 
   <script src="assets/js/script.js"></script>
