@@ -1,15 +1,16 @@
 
 
 
-
 body{
-  height: 97vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   /* background-image: url(../images/island.png); */
   background-color: black;
   background-size: cover;
+  overflow: hidden;
+  min-height: 100%;
 }
 
 .modal{
@@ -31,6 +32,7 @@ body{
   background-image: url(../images/island.png);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   border: none;
 }
 .instructions-modal{
@@ -302,3 +304,28 @@ h1 {
 .red{
   color: white;
 }
+
+
+/* iPad Styling */
+
+/* @media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) { /* STYLES GO HERE }*/
+
+/* @media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) { /* STYLES GO HERE  } */
+
+/* iPhone 6/7/8 Styling */
+
+/* @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) { /* STYLES GO HERE }
+
+/* @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) { STYLES GO HERE  } */

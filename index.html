@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Learn Hawaiian Memory Match</title>
   <link rel="stylesheet" href="assets/css/grid.css">
   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -20,27 +20,27 @@
 
         <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Games Played</p>
-          <div class='numbers'>
+          <div class="numbers">
             <p id="games-played">0</p>
           </div>
         </div>
 
         <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Attempts</p>
-          <div class='numbers'>
+          <div class="numbers">
             <p id="attempts">0</p>
           </div>
         </div>
         <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Matches</p>
-          <div class='numbers'>
+          <div class="numbers">
             <p id="matches">0</p>
           </div>
         </div>
 
         <div class="nes-container is-rounded is-dark">
           <p class="stats-title">Accuracy</p>
-          <div class='numbers'>
+          <div class="numbers">
             <p id="accuracy">0</p>
           </div>
         </div>
@@ -136,8 +136,8 @@
 
   <div id="start-modal" class="modal start-modal">
     <img src="/assets/images/title-text.png" alt="">
-    <h2 class="modal-middle-text blink red">Press Space to Begin</h2>
-    <button id='instructions-button' class="nes-btn">Instructions</button>
+    <h2 id="start-text" class="modal-middle-text blink red">Press Space to Begin</h2>
+    <button id="instructions-button" class="nes-btn">Instructions</button>
   </div>
 
   <div id="instructions-modal" class="modal instructions-modal hidden">
@@ -147,11 +147,11 @@
       them. The goal is to match the English word and image with the corresponding
       Hawaiian word.  To help, matching cards have the same background color and image
       icon.  See how fast you can match the cards... your time may get you on the
-      leader board!
+      leader board (coming soon)!
     </h2>
     <img src="assets/images/instructions_image.png" alt="">
     </div>
-    <button id='back-button' class="nes-btn">Back</button>
+    <button id="back-button" class="nes-btn">Back</button>
     </div>
   </div>
 
