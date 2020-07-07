@@ -1,5 +1,4 @@
 var cardDeck = ['react-logo', 'react-logo1', 'php-logo', 'php-logo1', 'node-logo', 'node-logo1', 'mysql-logo', 'mysql-logo1', 'html-logo', 'html-logo1', 'gitHub-logo', 'gitHub-logo1', 'js-logo', 'js-logo1', 'css-logo', 'css-logo1', 'docker-logo','docker-logo1']
-var theCards = document.querySelectorAll('.card-front');
 var firstCardClicked;
 var secondCardClicked;
 var firstCardClasses;
@@ -8,7 +7,6 @@ var maxMatches = 9;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
-var accuracy;
 var firstClick = new Audio('../assets/sounds/bling.ogg');
 var matchMade = new Audio('../assets/sounds/achieved.ogg');
 var nonMatch = new Audio('../assets/sounds/magic.ogg');
@@ -163,6 +161,11 @@ function handleClick(event) {
   }
 
 
+}
+
+if (navigator.userAgent.match(/Mobile/)) {
+  document.getElementById('start-text').textContent = 'Tap to Start';
+  document.getElementById('start-modal').addEventListener('click', () => startScreen.classList.add('hidden'));
 }
 
 document.getElementById('gameCards').addEventListener('click', handleClick);
