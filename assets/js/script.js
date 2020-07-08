@@ -15,7 +15,6 @@ var startScreen = document.getElementById('start-modal');
 
 document.onkeypress = function (e){
   if(e.keyCode == 32){
-    console.log(e);
     startScreen.classList.add('hidden');
   }
 }
@@ -87,7 +86,7 @@ function calculateAccuracy (matches, attempts) {
 }
 
 function bigGreen () {
-  document.getElementById('gameCards').style.border = '';
+  document.getElementById('gameCards').style.border = 'solid black 6px';
 }
 
 function displayStats () {
@@ -108,7 +107,7 @@ function noMatch () {
     firstCardClicked.classList.remove('hidden');
     secondCardClicked.classList.remove('hidden');
     setToNull();
-  document.getElementById('gameCards').style.border = '';
+  document.getElementById('gameCards').style.border = 'solid black 6px';
 
   }
 
