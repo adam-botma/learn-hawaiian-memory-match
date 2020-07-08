@@ -13,9 +13,16 @@ var nonMatch = new Audio('../assets/sounds/magic.ogg');
 var startScreen = document.getElementById('start-modal');
 
 
+if(window.innerHeight > window.innerWidth) {
+  document.getElementById('landscape-modal').className = 'modal landscape-modal';
+}
+
+if(window.innerWidth > window.innerHeight){
+  document.getElementById('landscape-modal').className = 'modal hidden landscape-modal';
+}
+
 document.onkeypress = function (e){
   if(e.keyCode == 32){
-    console.log(e);
     startScreen.classList.add('hidden');
   }
 }
@@ -87,7 +94,7 @@ function calculateAccuracy (matches, attempts) {
 }
 
 function bigGreen () {
-  document.getElementById('gameCards').style.border = '';
+  document.getElementById('gameCards').style.border = 'solid black 6px';
 }
 
 function displayStats () {
@@ -108,7 +115,7 @@ function noMatch () {
     firstCardClicked.classList.remove('hidden');
     secondCardClicked.classList.remove('hidden');
     setToNull();
-  document.getElementById('gameCards').style.border = '';
+  document.getElementById('gameCards').style.border = 'solid black 6px';
 
   }
 
@@ -146,8 +153,7 @@ function handleClick(event) {
       if(matches === maxMatches){
 
         document.getElementById('modal').classList.remove('hidden');
-        document.getElementById('modalAttempts').textContent = attempts;
-        document.getElementById('modalAccuracy').textContent = calculateAccuracy(matches, attempts);
+
       }
     } else {
       nonMatch.play();

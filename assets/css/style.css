@@ -78,6 +78,10 @@ h1 {
   justify-content: center;
 }
 
+#gameCards{
+  border: solid black 6px;
+}
+
 
 /* GAME AREA */
 .main-row{
@@ -310,6 +314,19 @@ h1 {
 }
 
 
+.landscape-modal{
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+
+}
+
+.landscape-modal > img{
+  width: 80%;
+
+}
+
 /* iPad Styling */
 
 /* @media only screen
@@ -341,6 +358,14 @@ and (orientation: landscape) {
     font-size: 1rem;
   }
 
+   .modal{
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  }
+
   .stats-title{
     font-size: .4rem;
   }
@@ -349,11 +374,20 @@ and (orientation: landscape) {
     font-size: .6rem;
   }
 
-  .start-modal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  .instructions-middle-text{
+    margin: 0;
+    color: white;
+    font-size: .8rem;
+    width: 100%;
+}
+
+.instructions-container > button{
+      margin-top: 15px;
+}
+
+.modal-middle-text{
+  text-align: center;
+}
 
   .start-modal > img {
     width: 60%;
@@ -375,6 +409,14 @@ and (orientation: landscape) {
     font-size: 1rem;
   }
 
+  .modal{
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  }
+
   .stats-title{
     font-size: .4rem;
   }
@@ -384,11 +426,19 @@ and (orientation: landscape) {
   }
 
   .start-modal{
-    background-size: unset;
+    width: 100%;
+    /* background-size: cover; */
   }
 
   .start-modal > img {
     width: 60%;
   }
+
+
+
+.instructions-middle-text{
+      color: white;
+    font-size: .8rem;
+}
 
  }
