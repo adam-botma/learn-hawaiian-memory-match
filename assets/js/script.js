@@ -7,7 +7,7 @@ var maxMatches = 9;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
-var firstClick = new Audio('../assets/sounds/bling.ogg');
+var firstClick = new Audio();
 var matchMade = new Audio('../assets/sounds/achieved.ogg');
 var nonMatch = new Audio('../assets/sounds/magic.ogg');
 var startScreen = document.getElementById('start-modal');
@@ -118,6 +118,7 @@ function handleClick(event) {
   }
   event.target.classList.add('hidden');
   if(!firstCardClicked){
+    firstClick.src = '../assets/sounds/bling.ogg';
     firstClick.play();
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className;
