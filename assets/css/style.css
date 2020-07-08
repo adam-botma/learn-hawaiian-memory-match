@@ -305,6 +305,10 @@ h1 {
   color: white;
 }
 
+.nes-container.is-rounded.is-dark {
+    border-image-repeat: repeat!important;
+}
+
 
 /* iPad Styling */
 
@@ -323,9 +327,68 @@ and (orientation : portrait) { /* STYLES GO HERE  } */
 /* @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px)
-and (orientation : landscape) { /* STYLES GO HERE }
+and (orientation : landscape) {  STYLES GO HERE } */
 
-/* @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) { STYLES GO HERE  } */
+@media (min-width : 375px)
+and (max-width : 667px)
+and (orientation: landscape) {
+ body{
+    height: 90vh;
+  }
+
+  h1 {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .stats-title{
+    font-size: .4rem;
+  }
+
+  .numbers {
+    font-size: .6rem;
+  }
+
+  .start-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .start-modal > img {
+    width: 60%;
+  }
+ }
+
+ /* iphone X Styling */
+
+ @media (min-width : 375px)
+and (max-width : 812px)
+and (orientation: landscape) {
+
+  body{
+    height: 90vh;
+  }
+
+  h1 {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .stats-title{
+    font-size: .4rem;
+  }
+
+  .numbers {
+    font-size: .6rem;
+  }
+
+  .start-modal{
+    background-size: unset;
+  }
+
+  .start-modal > img {
+    width: 60%;
+  }
+
+ }
