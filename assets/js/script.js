@@ -13,6 +13,14 @@ var nonMatch = new Audio('../assets/sounds/magic.ogg');
 var startScreen = document.getElementById('start-modal');
 
 
+if(window.innerHeight > window.innerWidth) {
+  document.getElementById('landscape-modal').className = 'modal landscape-modal';
+}
+
+if(window.innerWidth > window.innerHeight){
+  document.getElementById('landscape-modal').className = 'modal hidden landscape-modal';
+}
+
 document.onkeypress = function (e){
   if(e.keyCode == 32){
     startScreen.classList.add('hidden');
@@ -145,8 +153,7 @@ function handleClick(event) {
       if(matches === maxMatches){
 
         document.getElementById('modal').classList.remove('hidden');
-        document.getElementById('modalAttempts').textContent = attempts;
-        document.getElementById('modalAccuracy').textContent = calculateAccuracy(matches, attempts);
+
       }
     } else {
       nonMatch.play();
