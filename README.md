@@ -39,7 +39,7 @@ https://memory-match.adambotma.com/
     - A modal is shown to the player telling them they have won.
     - A button is provided which can reset the game by clicking on it.
 10. Resetting the game performs the following actions:
-    - All cards are flipped back over
+    - All cards are flipped back over and reshuffled
     - The number of games played is increased
     - The total number of matches are reset
     - The accuracy percentage is reset to 0%
