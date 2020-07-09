@@ -1,10 +1,5 @@
 # Learn Hawaiian Memory Match
 
-> - Maintained by: `adam-botma`
-
-
-## Project Description
-
 A fun memory match card game where users are required to match a card containg an English word (and helpful image) with the corresponding Hawaiian word card.  To help users learn which cards match, each matching card set has the same colored background and icon image.
 
 
@@ -14,8 +9,8 @@ https://memory-match.adambotma.com/
 
 
 ## Functionality Overview
-1. Memory match is a matching game in which a player attempts to match the images contained on "playing cards".  In this version rather than having two of the same image, one card has an English word (and an image of the word) with the second card has the matching Hawaiian word.
-2. Users are greated with a start screen and are given the option to click the instructions button to learn how the game is played. 
+1. Memory match is a matching game in which a player attempts to match the images contained on "playing cards".  In this version rather than having two of the same image, one card has an English word (and an image) while the second card has the matching Hawaiian word.
+2. Users are greated with a start screen and are given the option to click/tap the instructions button to learn how the game is played. 
 2.  When the game starts, there are a total of 18 cards:
     - Each card contains 1 of 9 matching image pairs
     - There are two of each matching pair allowing for 9 total matches
@@ -71,3 +66,7 @@ Game Play:
 Win Screen:
 
 ![](assets/images/win-screen.gif)
+
+## Design Inspiration
+
+I loved playing old computer games as a kid (and still do).  I wanted to create a pixel art based game that reminded me of the games I used to play growing up.  A majority of the assets used for the game were created by myself with the exception of the title screen background image ().  Additional styling provided by the <a href="https://nostalgic-css.github.io/NES.css/"> NES.css framework</a>. 
