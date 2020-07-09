@@ -57,13 +57,17 @@ https://memory-match.adambotma.com/
 ## Screenshots
 
 Welcom Screen:
+
 ![](assets/images/hawaii-mem-match-sml.gif)
 
-Instructions Scree:
+Instructions Screen:
+
 ![](assets/images/Instructions.png)
 
 Game Play:
+
 ![](assets/images/game-demo.gif)
 
 Win Screen:
+
 ![](assets/images/win-screen.gif)
