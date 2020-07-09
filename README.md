@@ -47,7 +47,9 @@ https://memory-match.adambotma.com/
 
 ## Further Development Plans
 1. Create a timer so players can see how fast they are able to clear the game.
-2. Create a Leaderboard for players to see how they rank (using Node.js and PostgreSQL to store leaderboard data)
+2. Create a Leaderboard for players to see how they rank (using Node.js and PostgreSQL to store leaderboard data).
+3. At the moment, users on iPhone and iPad need to refresh the page after switching to landscape mode from portrait mode in order for the modal to disapear.  Plan on fixing this issue. 
+4. Fix an issue where sound effects are not playing on IOS devices.
 
 ## Screenshots
 
@@ -69,4 +71,4 @@ Win Screen:
 
 ## Design Inspiration
 
-I loved playing old computer games as a kid (and still do).  I wanted to create a pixel art based game that reminded me of the games I used to play growing up.  A majority of the assets used for the game were created by myself with the exception of the title screen background image ().  Additional styling provided by the <a href="https://nostalgic-css.github.io/NES.css/"> NES.css framework</a>. 
+I loved playing old computer games as a kid (and still do).  I wanted to create a pixel art based game that reminded me of the games I used to play growing up.  A majority of the assets used for the game were created by myself with the exception of the title screen background image (will insert a link to the artist as soon as I found who created the piece).  Additional styling provided by the <a href="https://nostalgic-css.github.io/NES.css/"> NES.css framework</a>. 
