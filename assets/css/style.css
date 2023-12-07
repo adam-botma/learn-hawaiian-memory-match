@@ -1,7 +1,4 @@
-
-
-
-body{
+body {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -13,8 +10,8 @@ body{
   font-family: 'Press Start 2P', cursive;
 }
 
-.modal{
-  position: fixed!important;
+.modal {
+  position: fixed !important;
   background-color: rgb(78, 163, 243);
   padding: 1rem;
   display: flex;
@@ -24,7 +21,7 @@ body{
   border: solid white 6px;
 }
 
-.start-modal{
+.start-modal {
   top: 0;
   left: 0;
   height: 100%;
@@ -35,33 +32,28 @@ body{
   background-size: cover;
   border: none;
 }
-.instructions-modal{
+.instructions-modal {
   height: 100%;
   width: 100%;
   border: none;
 }
 
-
-.match{
+.match {
   position: fixed;
   background-color: none;
 
   height: 100%;
   width: 100%;
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.match > h1{
+.match > h1 {
   background-color: black;
-  color: #fdb7e7!important;
+  color: #fdb7e7 !important;
   border: 5px solid #fdb7e7;
-
 }
-
-
-
 
 /* HEADING AREA */
 h1 {
@@ -72,144 +64,134 @@ h1 {
   padding: 2rem;
 }
 
-.heading-row{
+.heading-row {
   height: 10%;
   display: flex;
   justify-content: center;
 }
 
-#gameCards{
+#gameCards {
   border: solid black 6px;
 }
 
-
 /* GAME AREA */
-.main-row{
+.main-row {
   height: 80%;
 }
 
-
-
 /* STATS AREA */
 
-.stats-container{
+.stats-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
 }
 
-.stats{
+.stats {
   background-color: aqua;
   height: 12%;
- text-align: center;
+  text-align: center;
 }
 
-.nes-container{
-  background-color: black!important;
-  padding: 0!important;
+.nes-container {
+  background-color: black !important;
+  padding: 0 !important;
 }
 
 .stats-title {
-    color: black;
-    background-color: white;
-    text-align: center;
-    padding: 3px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  padding: 3px;
 }
 
 .numbers {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 1.2rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 /* CARDS AREA */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-
 }
 
-.cards{
+.cards {
   height: 100%;
-  margin: .5rem ;
+  margin: 0.5rem;
   position: relative;
-
-
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   height: 100%;
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-
 }
 
 .card-back {
   background-image: url(../images/hang-loose-card.png);
   background-color: black;
   background-size: contain;
-
 }
-
 
 .js-logo {
   background-image: url(../images/crab.png);
 }
-.js-logo1{
+.js-logo1 {
   background-image: url(../images/crab-hawaiian.png);
 }
-.css-logo{
+.css-logo {
   background-image: url(../images/fish.png);
 }
-.css-logo1{
+.css-logo1 {
   background-image: url(../images/fish-hawaiian.png);
 }
-.docker-logo{
+.docker-logo {
   background-image: url(../images/turtle.png);
 }
-.docker-logo1{
+.docker-logo1 {
   background-image: url(../images/turtle-hawaiian.png);
 }
-.gitHub-logo{
+.gitHub-logo {
   background-image: url(../images/hello.png);
 }
-.gitHub-logo1{
+.gitHub-logo1 {
   background-image: url(../images/hello-hawaiian.png);
 }
-.html-logo{
+.html-logo {
   background-image: url(../images/shark.png);
 }
-.html-logo1{
+.html-logo1 {
   background-image: url(../images/shark-hawaiian.png);
 }
-.mysql-logo{
+.mysql-logo {
   background-image: url(../images/lizard.png);
 }
-.mysql-logo1{
+.mysql-logo1 {
   background-image: url(../images/lizard-hawaiian.png);
 }
-.node-logo{
+.node-logo {
   background-image: url(../images/thankyou.png);
 }
-.node-logo1{
+.node-logo1 {
   background-image: url(../images/thankyou-hawaiian.png);
 }
-.php-logo{
+.php-logo {
   background-image: url(../images/man.png);
 }
-.php-logo1{
+.php-logo1 {
   background-image: url(../images/man-hawaiian.png);
 }
-.react-logo{
+.react-logo {
   background-image: url(../images/woman.png);
 }
-.react-logo1{
+.react-logo1 {
   background-image: url(../images/women-hawaiian.png);
 }
 
@@ -217,31 +199,26 @@ h1 {
   display: none;
 }
 
-
 /* MODAl */
 
-
-.allStats{
+.allStats {
   display: flex;
   justify-content: space-between;
 }
 
 .modalDiv {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.modal-middle-text{
+.modal-middle-text {
   margin-bottom: 2rem;
   color: white;
-
-
 }
 
-.instructions-middle-text{
+.instructions-middle-text {
   margin: 1rem 1rem 2rem 1rem;
   color: white;
   font-size: 1rem;
@@ -249,41 +226,81 @@ h1 {
 }
 
 .blink {
-	-webkit-animation: blink .75s linear infinite;
-	-moz-animation: blink .75s linear infinite;
-	-ms-animation: blink .75s linear infinite;
-	-o-animation: blink .75s linear infinite;
-	 animation: blink .75s linear infinite;
+  -webkit-animation: blink 0.75s linear infinite;
+  -moz-animation: blink 0.75s linear infinite;
+  -ms-animation: blink 0.75s linear infinite;
+  -o-animation: blink 0.75s linear infinite;
+  animation: blink 0.75s linear infinite;
 }
 @-webkit-keyframes blink {
-	0% { opacity: 1; }
-	50% { opacity: 1; }
-	50.01% { opacity: 0; }
-	100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @-moz-keyframes blink {
-	0% { opacity: 1; }
-	50% { opacity: 1; }
-	50.01% { opacity: 0; }
-	100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @-ms-keyframes blink {
-	0% { opacity: 1; }
-	50% { opacity: 1; }
-	50.01% { opacity: 0; }
-	100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @-o-keyframes blink {
-	0% { opacity: 1; }
-	50% { opacity: 1; }
-	50.01% { opacity: 0; }
-	100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes blink {
-	0% { opacity: 1; }
-	50% { opacity: 1; }
-	50.01% { opacity: 0; }
-	100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .instructions-container {
@@ -294,37 +311,32 @@ h1 {
   align-items: center;
 }
 
-.middle-instructions-container{
+.middle-instructions-container {
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
-.middle-instructions-container > img{
+/* .middle-instructions-container > img{
   width: 35%;
   height: 35%;
-}
-.red{
+} */
+.red {
   color: white;
 }
 
 .nes-container.is-rounded.is-dark {
-    border-image-repeat: repeat!important;
+  border-image-repeat: repeat !important;
 }
 
-
-.landscape-modal{
+.landscape-modal {
   z-index: 3;
   width: 100vw;
   height: 100vh;
   border: none;
-
 }
 
-.landscape-modal > img{
+.landscape-modal > img {
   width: 80%;
-
 }
 
 /* iPad Styling */
@@ -346,10 +358,8 @@ and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : landscape) {  STYLES GO HERE } */
 
-@media (min-width : 375px)
-and (max-width : 667px)
-and (orientation: landscape) {
- body{
+@media (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
+  body {
     height: 90vh;
   }
 
@@ -358,49 +368,46 @@ and (orientation: landscape) {
     font-size: 1rem;
   }
 
-   .modal{
-  position: absolute!important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  .modal {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
-  .stats-title{
-    font-size: .4rem;
+  .stats-title {
+    font-size: 0.4rem;
   }
 
   .numbers {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 
-  .instructions-middle-text{
+  .instructions-middle-text {
     margin: 0;
     color: white;
-    font-size: .8rem;
+    font-size: 0.8rem;
     width: 100%;
-}
+  }
 
-.instructions-container > button{
-      margin-top: 15px;
-}
+  .instructions-container > button {
+    margin-top: 15px;
+  }
 
-.modal-middle-text{
-  text-align: center;
-}
+  .modal-middle-text {
+    text-align: center;
+  }
 
   .start-modal > img {
     width: 60%;
   }
- }
+}
 
- /* iphone X Styling */
+/* iphone X Styling */
 
- @media (min-width : 375px)
-and (max-width : 812px)
-and (orientation: landscape) {
-
-  body{
+@media (min-width: 375px) and (max-width: 812px) and (orientation: landscape) {
+  body {
     height: 90vh;
   }
 
@@ -409,23 +416,23 @@ and (orientation: landscape) {
     font-size: 1rem;
   }
 
-  .modal{
-  position: absolute!important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  .modal {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
-  .stats-title{
-    font-size: .4rem;
+  .stats-title {
+    font-size: 0.4rem;
   }
 
   .numbers {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 
-  .start-modal{
+  .start-modal {
     width: 100%;
     /* background-size: cover; */
   }
@@ -434,11 +441,8 @@ and (orientation: landscape) {
     width: 60%;
   }
 
-
-
-.instructions-middle-text{
-      color: white;
-    font-size: .8rem;
+  .instructions-middle-text {
+    color: white;
+    font-size: 0.8rem;
+  }
 }
-
- }
